@@ -4,6 +4,7 @@
 The goal of the project is to inference a deep learning semantic segmentation model on a webcam video stream in Linux in order to remove background and provide a clean video stream with a person only. The need for such a project was imposed by the lack of such tools in Linux and the popularity of video calls services in present times.
 
 ![Demo of the project output](readme_imgs/demo.gif "Project demo")
+
 *The app output demo. Based on a video from [vimeo](https://vimeo.com/14802778), which is licenced under CC Attribution license.*
 
 The main feature of the project in terms of computer vision is the usage of a lightweight neural network model which is able to run on CPU in real-time, which is quite challenging for the semantic segmentation task. The project is implemented in C++17.
@@ -140,9 +141,11 @@ It was retrained for 256x256 px input resolution, and extra data was utilized fo
 
 #### v4l2loopback
 
-Virtual video devices Linux kernel module is required to enable the program video output be accesable from other programs.
+Virtual video devices Linux kernel module is required to enable the program video output to be accessible from other programs.
 
-Some linux distros have it already preinstalled, or one can install it by following [documentation](https://github.com/umlaeute/v4l2loopback).
+Some Linux distros have it already preinstalled, or one can install it by following [documentation](https://github.com/umlaeute/v4l2loopback).
+
+It is available via apt for Ubuntu:
 
 ```
 sudo apt-get install -y v4l2loopback-dkms
